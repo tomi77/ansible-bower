@@ -17,20 +17,19 @@ A Ansible role to manage Bower tool
 - tomi77.bower
 
 # Install using global bower
-- { role: tomi77.bower, executable: bower }
+- role: tomi77.bower
+  executable: bower
 
 # Install lodash package
-- { role: tomi77.bower, pkg: lodash }
+- role: tomi77.bower
+  pkg: lodash
 
 # Uninstall lodash package
-- { role: tomi77.bower, pkg: lodash, state: absent }
+- role: tomi77.bower
+  pkg: lodash
+  state: absent
 
 # Specify bower.json location
-- { role: tomi77.bower, chdir: /location/of/bower/json/file }
-
-# Specify bower.json location (newer syntax)
-- include_role:
-    name: tomi77.bower
-  vars:
-    chdir: /location/of/bower/json/file
+- role: tomi77.bower
+  chdir: /location/of/bower/json/file
 ~~~
