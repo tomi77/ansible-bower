@@ -2,10 +2,10 @@
   command: "{{ bower_executable }} install {{ pkg | default('') }}"
   args:
     chdir: "{{ chdir | default('.') }}"
-  when: state | default(present) == 'present'
+  when: state | default('present') == 'present'
 
 - name: uninstall
   command: "{{ bower_executable }} uninstall {{ pkg | default('') }}"
   args:
     chdir: "{{ chdir | default('.') }}"
-  when: state | default(present) == 'absent'
+  when: state | default('present') == 'absent'
