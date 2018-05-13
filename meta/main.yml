@@ -1,0 +1,12 @@
+---
+galaxy_info:
+  author: Tomasz Jakub Rup
+  description: A Ansible role to manage Bower tool
+  license: MIT
+  min_ansible_version: 1.7
+  platforms:
+  - name: Ubuntu
+    versions:
+    - all
+  categories:
+  - development

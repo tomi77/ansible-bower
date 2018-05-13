@@ -1,0 +1,6 @@
+{
+  "name": "ansible-bower",
+  "dependencies": {
+    "bower": "*"
+  }
+}
