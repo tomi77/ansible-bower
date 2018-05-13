@@ -1,8 +1,11 @@
 - name: install
-  command: "{{ bower_cmd }} install {{ pkg }}"
-  # command: "echo \"{{ bower_cmd }} install {{ name }}\""
-  when: state == 'present'
+  command: "{{ bower_executable }} install {{ pkg | default('') }}"
+  args:
+    chdir: "{{ chdir | default('.') }}"
+  when: state | default(present) == 'present'
 
 - name: uninstall
-  command: "{{ bower_cmd }} uninstall {{ pkg }}"
-  when: state == 'absent'
+  command: "{{ bower_executable }} uninstall {{ pkg | default('') }}"
+  args:
+    chdir: "{{ chdir | default('.') }}"
+  when: state | default(present) == 'absent'

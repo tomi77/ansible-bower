@@ -7,22 +7,14 @@
   tasks:
   - include: '../tasks/main.yml'
     state: present
-    args:
-      chdir: .
 
   - include: '../tasks/main.yml'
     state: absent
-    args:
-      chdir: .
 
   - include: '../tasks/main.yml'
     state: present
     pkg: lodash
-    args:
-      chdir: .
 
   - include: '../tasks/main.yml'
     state: absent
     pkg: lodash
-    args:
-      chdir: .
