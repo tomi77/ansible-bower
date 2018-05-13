@@ -12,7 +12,7 @@ A Ansible role to manage Bower tool
 
 ## Examples
 
-~~~
+~~~yaml
 # Install all from bower.json
 - tomi77.bower
 
